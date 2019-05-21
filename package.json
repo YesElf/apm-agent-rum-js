@@ -10,6 +10,7 @@
   "files": [
     "packages/rum"
   ],
+  "main": "packages/rum/src/index.js",
   "scripts": {
     "prerelease": "npm test",
     "release": "lerna publish",
