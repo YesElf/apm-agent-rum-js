@@ -3,7 +3,6 @@ node_modules
 
 *.e2e-bundle.*
 
-dist
 tmp
 
 error-screenshot
