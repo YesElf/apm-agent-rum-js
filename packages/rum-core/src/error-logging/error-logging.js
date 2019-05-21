@@ -129,7 +129,7 @@ class ErrorLogging {
 
   registerGlobalEventListener() {
     var errorLogging = this
-    window.onerror = function(messageOrEvent, source, lineno, colno, error) {
+    var errorCallback = function(messageOrEvent, source, lineno, colno, error) {
       var errorEvent
       if (
         typeof messageOrEvent !== 'undefined' &&
@@ -147,6 +147,9 @@ class ErrorLogging {
       }
       errorLogging.logErrorEvent(errorEvent)
     }
+    window.addEventListener("error", function(e) {
+      errorCallback(e.message, e.filename, e.lineno, e.colno, e.error)
+    })
   }
 
   logError(messageOrError) {

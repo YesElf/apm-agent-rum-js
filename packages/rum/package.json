@@ -53,5 +53,8 @@
       "path": "./dist/bundles/elastic-apm-opentracing*.min.js",
       "maxSize": "18kB"
     }
-  ]
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
 }
