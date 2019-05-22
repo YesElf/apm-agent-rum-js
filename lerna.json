@@ -6,10 +6,9 @@
   "registry": "https://registry.npmjs.org",
   "command": {
     "version": {
-      "allowBranch": "master",
+      "allowBranch": "release/4.0.1",
       "conventionalCommits": true,
-      "message": "chore(release): publish",
-      "gitRemote": "upstream"
+      "message": "chore(release): publish"
     },
     "ignoreChanges": [
       "**/*.md",

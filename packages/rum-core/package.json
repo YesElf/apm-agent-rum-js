@@ -1,5 +1,5 @@
 {
-  "name": "@elastic/apm-rum-core",
+  "name": "@yeself/apm-rum-core",
   "version": "4.0.1",
   "description": "Elastic apm core",
   "license": "MIT",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/elastic/apm-agent-rum-js.git",
+    "url": "https://github.com/YesElf/apm-agent-rum-js.git",
     "directory": "packages/rum-core"
   },
   "scripts": {

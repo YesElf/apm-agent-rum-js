@@ -5,23 +5,18 @@
   "description": "Elastic APM RUM agent",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elastic/apm-agent-rum-js.git"
+    "url": "https://github.com/YesElf/apm-agent-rum-js.git"
   },
-  "files": [
-    "packages/rum"
-  ],
-  "main": "packages/rum/src/index.js",
   "scripts": {
-    "prerelease": "npm test",
     "release": "lerna publish",
     "release-package": "node scripts/publish",
-    "release-github": "lerna run --scope @elastic/apm-rum test && node scripts/release-github",
+    "release-github": "node scripts/release-github",
     "build-docs": "sh ./scripts/build_docs.sh apm-agent-rum-js ./docs ./build",
     "lint": "npm-run-all --silent -p lint:*",
     "lint:js": "eslint .",
     "lint:license": "node scripts/license-checker",
     "format": "eslint . --fix",
-    "test": "lerna run build:main && lerna run test --stream --scope=$SCOPE --no-prefix",
+    "test": "lerna run build:main && lerna run test --stream --scope=@yeself/apm-rum --no-prefix",
     "bundlesize": "lerna run bundlesize --stream"
   },
   "husky": {
@@ -92,7 +87,7 @@
     "whatwg-fetch": "^3.0.0"
   },
   "dependencies": {
-    "@elastic/apm-rum": "file:packages/rum",
-    "@elastic/apm-rum-core": "file:packages/rum-core"
+    "@yeself/apm-rum": "file:packages/rum",
+    "@yeself/apm-rum-core": "file:packages/rum-core"
   }
 }
